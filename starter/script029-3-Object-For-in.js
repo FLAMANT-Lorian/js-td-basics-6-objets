@@ -9,7 +9,6 @@ for(const prop in objet) {
   console.log(prop + " : " + objet[prop]);
 }   
 */
-
 /*
 EXERCICE 1 : 
 Parcours l'objet mesFruits pour afficher, pour chacun des fruits, "Le fruit … coûte … €"
@@ -22,6 +21,9 @@ const mesFruits = {
 
 // Écris ton code ici
 
+for (const mesFruitsKey in mesFruits) {
+  console.log(`Le fruit : ${mesFruitsKey} coute ${mesFruits[mesFruitsKey]} €`);
+}
 /*
 EXERCICE 2 :
 Parcours l'objet fruit pour afficher chacune de ses propriétés avec, pour chacune, sa valeur
@@ -35,6 +37,9 @@ const fruit = {
 
 // Écris ton code ici
 
+for (const fruitKey in fruit) {
+  console.log(`${fruitKey} : ${fruit[fruitKey]}`);
+}
 // Un mot est un objet de type String => ceci fonctionne également…
 /*
 EXERCICE 3 :
@@ -43,3 +48,7 @@ Parcours le mot "Bonjour" pour afficher séparément chacune de ses lettres
 const mot = "Bonjour";
 
 // Écris ton code ici
+
+for (const motKey in mot){
+  console.log(`${motKey} : ${mot[motKey]}`);
+}

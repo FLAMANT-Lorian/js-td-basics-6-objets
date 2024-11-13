@@ -4,46 +4,43 @@
 
 /* Une MÉTHODE est une fonction associée à un objet */
 
-const aurora = {
-    nom: "Aurora",
-    sante: 150,
-    force: 25
-};
 
 // Affiche "… a … points de vie et … en force"
 
 // Crée une fonction décrire qui prend personnage en paramètre et renvoie la description du personnage
 // écris ta fonction décrire ici
 
+//function decrire(personnage){
+    //return `${personnage} à 15 ans et est musclé(e) !`;
+//}
 // Utilise cette fonction pour afficher la description d'Aurora
 
+//console.log(decrire('Aurora'));
 // Ajoute à présent cette fonction à l'intérieur de l'objet aurora
-const aurora = {
-    nom: "Aurora",
-    sante: 150,
-    force: 25,
+
     // renvoie la description du personnage
     // écris ton code ici
-};
-// Utilise à présent cette méthode pour afficher la description d'Aurora
 
+const aurora = {
+    decrire(personnage){
+        return `${personnage} à 15 ans et est musclé(e) !`;
+    }
+}
+// Utilise à présent cette méthode pour afficher la description d'Aurora
+console.log(aurora.decrire('Aurora'));
 /*
 EXERCICE 1 : Ajoute une méthode calcAge à john qui calcule son âge
 (en soustrayant sa date de naissance de 2019), le retourne et le stocke dans une propriété age.
 */
-var john = {
-    firstName: 'John',
-    lastName: 'Smith',
-    birthYear: 1992,
-    family: ['Jane', 'Mark', 'Bob', 'Emily'],
-    job: 'teacher',
-    isMarried: false,
-    calcAge: function() {
-        return this.age = 2019 - this.birthYear;
-    }
+
+const jhon = {
+    annee_naissance: 1973,
+    calcAge(){
+        return this.age = 2019 - this.annee_naissance;
+    },
 };
-console.log(john);
-console.log(john.calcAge());
+
+console.log(`${jhon.calcAge()} ans`);
 
 /*
 EXERCICE 2 :
@@ -51,6 +48,17 @@ EXERCICE 2 :
 - Ajoute une méthode à cet objet qui lui permet de calculer sa propre surface
 - Utilise cette méthode pour afficher sa surface dans la console
 */
+
+const rectangle = {
+    longueur: 5,
+    largeur: 5,
+    calcSurface(){
+        return this.longueur * this.largeur;
+    }
+};
+console.log(`${rectangle.calcSurface()} cm2`);
+
+
 
 /* **********************************
 * Les objets prédéfinis de JavaScript
